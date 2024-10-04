@@ -15,7 +15,10 @@
             <option
                 th:each="type : ${allMessageTypes}"
                 th:value="${type}"
-                th:text="${type}"></option>
+                th:text="${type}"
+            >
+                Say
+            </option>
         </select>
         <input type="submit">
     </form>
