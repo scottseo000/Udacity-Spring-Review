@@ -21,9 +21,9 @@ public class MessageService {
     public void addMessage(ChatForm chatForm) {
         ChatMessage message = new ChatMessage();
         message.setUsername(chatForm.getUsername());
-        if(chatForm.getMessageType() == "Shout") {
+        if(chatForm.getMessageType().equals("Shout")) {
             message.setMessage(chatForm.getMessageText().toUpperCase());
-        } else if (chatForm.getMessageType() == "Whisper") {
+        } else if (chatForm.getMessageType().equals("Whisper")) {
             message.setMessage(chatForm.getMessageText().toLowerCase());
         } else {
             message.setMessage(chatForm.getMessageText());
